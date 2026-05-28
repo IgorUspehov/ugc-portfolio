@@ -45,8 +45,8 @@ export default function Nav() {
             onClick={() => switchLang(lang)}
             className={`transition-colors ${
               activeLang === lang
-                ? 'text-accent font-semibold'
-                : 'text-text-muted hover:text-text-secondary'
+                ? 'text-emerald-400 font-semibold'
+                : 'text-gray-400 hover:text-gray-200'
             }`}
           >
             {lang}
