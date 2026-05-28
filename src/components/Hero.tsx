@@ -1,14 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { ArrowRight, Play } from 'lucide-react';
-
-const trustSignals = [
-  '3-day delivery',
-  'Munich, Germany',
-  'EN / RU / DE (learning)',
-  'Available June 2026',
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,11 +24,18 @@ export default function Hero() {
     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const trustSignals = [
+    t('hero.trust_delivery'),
+    t('hero.trust_location'),
+    t('hero.trust_languages'),
+    t('hero.trust_available'),
+  ];
+
   return (
     <section
       id="hero"
       ref={ref}
-      className="min-h-screen flex flex-col justify-center px-6 pt-24 pb-16 max-w-6xl mx-auto"
+      className="min-h-screen flex flex-col justify-center px-6 pt-24 pb-16 max-w-6xl mx-auto relative"
     >
       <div className="max-w-4xl">
         {/* Label */}
@@ -43,7 +45,7 @@ export default function Hero() {
         >
           <span className="w-1.5 h-1.5 rounded-full bg-accent" />
           <span className="text-xs font-mono text-text-secondary tracking-wide">
-            UGC Creator — AI & SaaS
+            {t('hero.label')}
           </span>
         </div>
 
@@ -52,21 +54,18 @@ export default function Hero() {
           data-fade
           className="text-5xl sm:text-6xl lg:text-7xl font-bold text-text-primary leading-[1.05] tracking-tight mb-6 opacity-0"
         >
-          UGC for{' '}
-          <span className="text-accent">AI & SaaS</span>
+          {t('hero.headline_1')}{' '}
+          <span className="text-accent">{t('hero.headline_2')}</span>
           <br />
-          brands.
+          {t('hero.headline_3')}
         </h1>
 
         {/* Subheadline */}
         <p
           data-fade
           className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-2xl mb-10 opacity-0"
-        >
-          I film authentic product videos{' '}
-          <span className="text-text-primary">AND</span> build working demo
-          pages. One creator, double leverage.
-        </p>
+          dangerouslySetInnerHTML={{ __html: t('hero.subheadline') }}
+        />
 
         {/* CTAs */}
         <div data-fade className="flex flex-wrap items-center gap-4 mb-16 opacity-0">
@@ -74,7 +73,7 @@ export default function Hero() {
             onClick={scrollToContact}
             className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-background font-semibold text-sm rounded-lg hover:bg-accent-dim transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
-            Book a project
+            {t('hero.cta_primary')}
             <ArrowRight size={16} />
           </button>
           <button
@@ -82,15 +81,12 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-6 py-3 border border-border text-text-primary font-medium text-sm rounded-lg hover:border-border-hover hover:bg-surface-2 transition-all duration-200"
           >
             <Play size={14} />
-            See work
+            {t('hero.cta_secondary')}
           </button>
         </div>
 
         {/* Trust signals */}
-        <div
-          data-fade
-          className="flex flex-wrap items-center gap-x-6 gap-y-2 opacity-0"
-        >
+        <div data-fade className="flex flex-wrap items-center gap-x-6 gap-y-2 opacity-0">
           {trustSignals.map((signal, i) => (
             <span key={i} className="flex items-center gap-2">
               {i > 0 && (

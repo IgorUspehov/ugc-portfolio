@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const links = [
-  { label: 'Work', href: '#work' },
-  { label: 'Services', href: '#services' },
-  { label: 'Process', href: '#process' },
-  { label: 'Contact', href: '#contact' },
-];
+const LANGS = ['EN', 'DE', 'RU'] as const;
+type Lang = typeof LANGS[number];
+
+const langMap: Record<Lang, string> = { EN: 'en', DE: 'de', RU: 'ru' };
+const reverseLangMap: Record<string, Lang> = { en: 'EN', de: 'DE', ru: 'RU' };
 
 export default function Nav() {
+  const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const activeLang: Lang = reverseLangMap[i18n.language] ?? 'EN';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -19,9 +22,39 @@ export default function Nav() {
 
   const handleLink = (href: string) => {
     setMenuOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const switchLang = (lang: Lang) => {
+    i18n.changeLanguage(langMap[lang]);
+  };
+
+  const links = [
+    { label: t('nav.work'), href: '#work' },
+    { label: t('nav.services'), href: '#services' },
+    { label: t('nav.process'), href: '#process' },
+    { label: t('nav.contact'), href: '#contact' },
+  ];
+
+  const LangSwitcher = ({ className = '' }: { className?: string }) => (
+    <div className={`flex items-center gap-1 font-mono text-xs ${className}`}>
+      {LANGS.map((lang, i) => (
+        <span key={lang} className="flex items-center gap-1">
+          {i > 0 && <span className="text-border select-none">|</span>}
+          <button
+            onClick={() => switchLang(lang)}
+            className={`transition-colors ${
+              activeLang === lang
+                ? 'text-accent font-semibold'
+                : 'text-text-muted hover:text-text-secondary'
+            }`}
+          >
+            {lang}
+          </button>
+        </span>
+      ))}
+    </div>
+  );
 
   return (
     <nav
@@ -39,20 +72,25 @@ export default function Nav() {
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => { e.preventDefault(); handleLink(link.href); }}
-              className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+              className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors whitespace-nowrap"
             >
               {link.label}
             </a>
           ))}
+
+          <LangSwitcher className="pl-4 border-l border-border" />
+
           <div className="flex items-center gap-2 pl-4 border-l border-border">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse-slow" />
-            <span className="text-xs font-mono text-text-secondary">Available June 2026</span>
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse-slow shrink-0" />
+            <span className="text-xs font-mono text-text-secondary whitespace-nowrap">
+              {t('nav.available')}
+            </span>
           </div>
         </div>
 
@@ -81,9 +119,12 @@ export default function Nav() {
               {link.label}
             </a>
           ))}
-          <div className="flex items-center gap-2 pt-2 border-t border-border">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse-slow" />
-            <span className="text-xs font-mono text-text-secondary">Available June 2026</span>
+          <div className="flex items-center justify-between pt-2 border-t border-border">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-accent animate-pulse-slow" />
+              <span className="text-xs font-mono text-text-secondary">{t('nav.available')}</span>
+            </div>
+            <LangSwitcher />
           </div>
         </div>
       )}

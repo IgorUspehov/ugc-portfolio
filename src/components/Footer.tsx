@@ -1,11 +1,14 @@
 import { Github, Linkedin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="border-t border-border bg-surface">
       <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-xs font-mono text-text-muted">
-          © {new Date().getFullYear()} Ihor Uspekhov. Munich, Germany.
+          © {new Date().getFullYear()} {t('footer.copyright')}
         </p>
         <div className="flex items-center gap-4">
           <a

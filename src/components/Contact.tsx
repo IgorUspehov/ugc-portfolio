@@ -1,13 +1,7 @@
 import { useState } from 'react';
 import { Send, ArrowUpRight } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-
-const projectTypes = [
-  'UGC Video (€250)',
-  'UGC + Demo Combo (€750)',
-  'Founder Story Package (€1,200)',
-  'Custom / Not sure yet',
-];
+import { useTranslation } from 'react-i18next';
 
 interface FormState {
   name: string;
@@ -17,6 +11,7 @@ interface FormState {
 }
 
 export default function Contact() {
+  const { t } = useTranslation();
   const ref = useScrollAnimation();
   const [form, setForm] = useState<FormState>({
     name: '',
@@ -26,6 +21,8 @@ export default function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const projectTypes = t('contact.form.types', { returnObjects: true }) as string[];
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -47,12 +44,12 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className="animate-on-scroll mb-4">
           <span className="text-xs font-mono text-accent tracking-widest uppercase">
-            Contact
+            {t('contact.label')}
           </span>
         </div>
         <div className="animate-on-scroll delay-100 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary tracking-tight">
-            Let's build something
+            {t('contact.heading')}
           </h2>
           <a
             href="mailto:uspeh.polimer2022@gmail.com"
@@ -75,11 +72,9 @@ export default function Contact() {
                   <Send size={18} className="text-accent" />
                 </div>
                 <h3 className="text-xl font-semibold text-text-primary mb-2">
-                  Message received.
+                  {t('contact.success_heading')}
                 </h3>
-                <p className="text-text-secondary text-sm">
-                  I'll get back to you within 24 hours. Talk soon.
-                </p>
+                <p className="text-text-secondary text-sm">{t('contact.success_body')}</p>
               </div>
             ) : (
               <form
@@ -89,20 +84,20 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
                     <label className="text-xs font-mono text-text-muted">
-                      Name
+                      {t('contact.form.name_label')}
                     </label>
                     <input
                       name="name"
                       value={form.name}
                       onChange={handleChange}
                       required
-                      placeholder="Your name"
+                      placeholder={t('contact.form.name_placeholder')}
                       className="px-3 py-2.5 rounded-lg border border-border bg-background text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:border-accent/50 transition-colors"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <label className="text-xs font-mono text-text-muted">
-                      Email
+                      {t('contact.form.email_label')}
                     </label>
                     <input
                       name="email"
@@ -110,7 +105,7 @@ export default function Contact() {
                       value={form.email}
                       onChange={handleChange}
                       required
-                      placeholder="you@company.com"
+                      placeholder={t('contact.form.email_placeholder')}
                       className="px-3 py-2.5 rounded-lg border border-border bg-background text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:border-accent/50 transition-colors"
                     />
                   </div>
@@ -118,7 +113,7 @@ export default function Contact() {
 
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-mono text-text-muted">
-                    Project type
+                    {t('contact.form.type_label')}
                   </label>
                   <select
                     name="projectType"
@@ -128,11 +123,11 @@ export default function Contact() {
                     className="px-3 py-2.5 rounded-lg border border-border bg-background text-text-primary text-sm focus:outline-none focus:border-accent/50 transition-colors appearance-none"
                   >
                     <option value="" disabled>
-                      Select a package
+                      {t('contact.form.type_placeholder')}
                     </option>
-                    {projectTypes.map((t) => (
-                      <option key={t} value={t}>
-                        {t}
+                    {projectTypes.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
                       </option>
                     ))}
                   </select>
@@ -140,7 +135,7 @@ export default function Contact() {
 
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-mono text-text-muted">
-                    Tell me about your product
+                    {t('contact.form.message_label')}
                   </label>
                   <textarea
                     name="message"
@@ -148,7 +143,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={4}
-                    placeholder="What does it do? Who is it for? What do you want the video to achieve?"
+                    placeholder={t('contact.form.message_placeholder')}
                     className="px-3 py-2.5 rounded-lg border border-border bg-background text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:border-accent/50 transition-colors resize-none"
                   />
                 </div>
@@ -161,11 +156,11 @@ export default function Contact() {
                   {loading ? (
                     <>
                       <span className="w-4 h-4 border-2 border-background/30 border-t-background rounded-full animate-spin" />
-                      Sending…
+                      {t('contact.form.submitting')}
                     </>
                   ) : (
                     <>
-                      Send message
+                      {t('contact.form.submit')}
                       <Send size={14} />
                     </>
                   )}
@@ -176,22 +171,22 @@ export default function Contact() {
 
           {/* Sidebar */}
           <div className="lg:col-span-2 flex flex-col gap-4">
-            {/* Email CTA */}
+            {/* Email CTA card */}
             <div className="animate-on-scroll delay-300 rounded-xl border border-border bg-surface p-6">
               <div className="w-10 h-10 rounded-lg border border-border bg-background flex items-center justify-center mb-4">
                 <Send size={16} className="text-accent" />
               </div>
               <h3 className="text-base font-semibold text-text-primary mb-2">
-                Prefer email?
+                {t('contact.email_card_heading')}
               </h3>
               <p className="text-sm text-text-secondary mb-4">
-                Drop me a line directly. I respond within 24 hours.
+                {t('contact.email_card_description')}
               </p>
               <a
                 href="mailto:uspeh.polimer2022@gmail.com"
                 className="inline-flex items-center gap-2 px-4 py-2.5 border border-border bg-background text-text-primary text-sm font-medium rounded-lg hover:border-border-hover hover:bg-surface-2 transition-all"
               >
-                Email me
+                {t('contact.email_cta')}
                 <ArrowUpRight size={13} />
               </a>
             </div>
@@ -199,7 +194,7 @@ export default function Contact() {
             {/* Direct email */}
             <div className="animate-on-scroll delay-400 rounded-xl border border-border bg-surface p-6">
               <p className="text-xs font-mono text-text-muted mb-3 uppercase tracking-widest">
-                Direct email
+                {t('contact.email_label')}
               </p>
               <a
                 href="mailto:uspeh.polimer2022@gmail.com"
@@ -211,9 +206,7 @@ export default function Contact() {
                   className="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                 />
               </a>
-              <p className="text-sm text-text-muted mt-2">
-                Response within 24 hours.
-              </p>
+              <p className="text-sm text-text-muted mt-2">{t('contact.email_response')}</p>
             </div>
           </div>
         </div>

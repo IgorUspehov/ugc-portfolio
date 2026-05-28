@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "work": "Work",
+    "services": "Services",
+    "process": "Process",
+    "contact": "Contact",
+    "available": "Available June 2026"
+  },
+  "hero": {
+    "label": "UGC Creator — AI & SaaS",
+    "headline_1": "UGC for",
+    "headline_2": "AI & SaaS",
+    "headline_3": "brands.",
+    "subheadline": "I film authentic product videos <strong>AND</strong> build working demo pages. One creator, double leverage.",
+    "cta_primary": "Book a project",
+    "cta_secondary": "See work",
+    "trust_delivery": "3-day delivery",
+    "trust_location": "Munich, Germany",
+    "trust_languages": "EN / RU / DE (learning)",
+    "trust_available": "Available June 2026"
+  },
+  "work": {
+    "label": "Portfolio",
+    "heading": "Recent work",
+    "description": "Authentic product videos for AI tools and SaaS platforms. Each project includes a working demo page.",
+    "cta_text": "All videos include raw files + working demo page URL.",
+    "cta_link": "Let's build yours.",
+    "projects": {
+      "writeai": { "label": "AI Writing Tool — Demo Video", "type": "Demo Video" },
+      "pipelinehq": { "label": "DevOps SaaS — Founder Testimonial", "type": "Founder Testimonial" },
+      "focusflow": { "label": "Productivity App — Tutorial", "type": "Tutorial" },
+      "codereview": { "label": "Developer Tool — Product Walkthrough", "type": "Product Walkthrough" },
+      "docubot": { "label": "B2B SaaS — Explainer Video", "type": "Explainer" },
+      "infrastack": { "label": "Cloud SaaS — Onboarding Flow", "type": "Onboarding" }
+    }
+  },
+  "services": {
+    "label": "Services",
+    "heading": "What you get",
+    "description": "Straightforward packages. No hidden fees, no agency overhead.",
+    "cta": "Get started",
+    "cta_popular": "Book this package",
+    "popular_badge": "Most Popular",
+    "plans": {
+      "video": {
+        "name": "UGC Video",
+        "unit": "per video",
+        "description": "Authentic product video optimized for paid social and landing pages.",
+        "features": [
+          "30–60 second product video",
+          "English or Russian delivery",
+          "Multiple aspect ratios",
+          "Raw footage included",
+          "2 revision rounds",
+          "3-day turnaround"
+        ]
+      },
+      "combo": {
+        "name": "UGC + Demo Combo",
+        "unit": "per package",
+        "description": "Three UGC videos plus a custom landing page demo, built and deployed.",
+        "features": [
+          "3 UGC product videos",
+          "Custom demo landing page (Bolt)",
+          "A/B-ready vs. your live page",
+          "Script consulting included",
+          "English or Russian",
+          "Raw footage + source code"
+        ]
+      },
+      "founder": {
+        "name": "Founder Story",
+        "unit": "per package",
+        "description": "Full-stack content production for pre-launch or growth-stage founders.",
+        "features": [
+          "5 UGC product videos",
+          "Demo landing page (Bolt)",
+          "Script consulting + review",
+          "Founder narrative framing",
+          "Priority delivery (4 days)",
+          "All raw assets + code"
+        ]
+      }
+    }
+  },
+  "process": {
+    "label": "Process",
+    "heading": "Four days. Done.",
+    "description": "No long onboarding. No endless back-and-forth. Scoped, shipped, delivered.",
+    "steps": [
+      {
+        "day": "Day 1",
+        "name": "Brief",
+        "description": "Kickoff call to align on brand voice, target audience, and key messaging. I take notes so you don't have to.",
+        "detail": "Kickoff call · Brand voice alignment · Asset collection"
+      },
+      {
+        "day": "Day 2",
+        "name": "Script + Demo",
+        "description": "Scripts written and reviewed. Demo landing page built in Bolt with real product context, deployed and shareable.",
+        "detail": "Script drafts · Demo page built · Review sync"
+      },
+      {
+        "day": "Day 3",
+        "name": "Filming",
+        "description": "Videos shot in 2–3 delivery styles: screen record, talking head, or product close-up. All in one session.",
+        "detail": "Multi-style shooting · Natural lighting · Authentic tone"
+      },
+      {
+        "day": "Day 4",
+        "name": "Delivery",
+        "description": "Final cut + raw footage zipped. Demo page URL live. Everything labeled and ready for your team.",
+        "detail": "Final files · Raw footage · Demo URL"
+      }
+    ]
+  },
+  "about": {
+    "label": "About",
+    "heading": "Engineer who learned to sell what he builds.",
+    "para1": "I'm Ihor. Linux engineer turned UGC creator, based in Munich. I spent years building software before realizing my edge: I can sell what I build, because I understand it.",
+    "para2": "Most UGC creators can talk about your product. I can also build it. When you hire me, you get authentic video AND a working demo to A/B test against your live page. No middleman, no agency markup.",
+    "skills": [
+      "Linux / DevOps background",
+      "Authentic UGC video production",
+      "Landing page & demo builds"
+    ],
+    "terminal": {
+      "location_value": "Munich, Germany",
+      "status_value": "AVAILABLE"
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "heading": "Let's build something",
+    "email_label": "Direct email",
+    "email_response": "Response within 24 hours.",
+    "email_cta": "Email me",
+    "email_card_heading": "Prefer email?",
+    "email_card_description": "Drop me a line directly. I respond within 24 hours.",
+    "success_heading": "Message received.",
+    "success_body": "I'll get back to you within 24 hours. Talk soon.",
+    "form": {
+      "name_label": "Name",
+      "name_placeholder": "Your name",
+      "email_label": "Email",
+      "email_placeholder": "you@company.com",
+      "type_label": "Project type",
+      "type_placeholder": "Select a package",
+      "message_label": "Tell me about your product",
+      "message_placeholder": "What does it do? Who is it for? What do you want the video to achieve?",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "types": [
+        "UGC Video (€250)",
+        "UGC + Demo Combo (€750)",
+        "Founder Story Package (€1,200)",
+        "Custom / Not sure yet"
+      ]
+    }
+  },
+  "footer": {
+    "copyright": "Ihor Uspekhov. Munich, Germany."
+  }
+}

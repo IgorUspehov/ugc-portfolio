@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "work": "Arbeiten",
+    "services": "Leistungen",
+    "process": "Ablauf",
+    "contact": "Kontakt",
+    "available": "Verfügbar ab Juni 2026"
+  },
+  "hero": {
+    "label": "UGC Creator — AI & SaaS",
+    "headline_1": "UGC für",
+    "headline_2": "AI- und SaaS-",
+    "headline_3": "Marken.",
+    "subheadline": "Ich drehe authentische Produktvideos <strong>UND</strong> baue funktionierende Demo-Seiten. Ein Creator, doppelter Mehrwert.",
+    "cta_primary": "Projekt anfragen",
+    "cta_secondary": "Arbeiten ansehen",
+    "trust_delivery": "3 Tage Lieferzeit",
+    "trust_location": "München, Deutschland",
+    "trust_languages": "EN / RU / DE (learning)",
+    "trust_available": "Verfügbar ab Juni 2026"
+  },
+  "work": {
+    "label": "Portfolio",
+    "heading": "Aktuelle Projekte",
+    "description": "Authentische Produktvideos für AI-Tools und SaaS-Plattformen. Jedes Projekt enthält eine fertige Demo-Seite.",
+    "cta_text": "Alle Videos enthalten Rohmaterial + Demo-Seiten-URL.",
+    "cta_link": "Lassen Sie uns Ihres bauen.",
+    "projects": {
+      "writeai": { "label": "AI Writing Tool — Demo-Video", "type": "Demo-Video" },
+      "pipelinehq": { "label": "DevOps SaaS — Gründer-Testimonial", "type": "Gründer-Testimonial" },
+      "focusflow": { "label": "Produktivitäts-App — Tutorial", "type": "Tutorial" },
+      "codereview": { "label": "Developer Tool — Produkt-Walkthrough", "type": "Produkt-Walkthrough" },
+      "docubot": { "label": "B2B SaaS — Erklärvideo", "type": "Erklärvideo" },
+      "infrastack": { "label": "Cloud SaaS — Onboarding-Flow", "type": "Onboarding" }
+    }
+  },
+  "services": {
+    "label": "Leistungen",
+    "heading": "Was Sie bekommen",
+    "description": "Klare Pakete ohne versteckte Kosten und ohne Agentur-Aufschläge.",
+    "cta": "Jetzt starten",
+    "cta_popular": "Paket buchen",
+    "popular_badge": "Beliebteste Wahl",
+    "plans": {
+      "video": {
+        "name": "UGC Video",
+        "unit": "pro Video",
+        "description": "Authentisches Produktvideo, optimiert für Paid Social und Landing Pages.",
+        "features": [
+          "30–60 Sekunden Produktvideo",
+          "Lieferung auf Englisch oder Russisch",
+          "Mehrere Seitenverhältnisse",
+          "Rohmaterial inklusive",
+          "2 Überarbeitungsrunden",
+          "3 Tage Lieferzeit"
+        ]
+      },
+      "combo": {
+        "name": "UGC + Demo Combo",
+        "unit": "pro Paket",
+        "description": "Drei UGC-Videos plus eine individuelle Demo-Landing-Page, gebaut und deployed.",
+        "features": [
+          "3 UGC Produktvideos",
+          "Individuelle Demo-Landing-Page (Bolt)",
+          "A/B-bereit im Vergleich zur Live-Seite",
+          "Script-Beratung inklusive",
+          "Englisch oder Russisch",
+          "Rohmaterial + Quellcode"
+        ]
+      },
+      "founder": {
+        "name": "Founder Story",
+        "unit": "pro Paket",
+        "description": "Full-Stack-Content-Produktion für Gründer in der Vor- oder Wachstumsphase.",
+        "features": [
+          "5 UGC Produktvideos",
+          "Demo-Landing-Page (Bolt)",
+          "Script-Beratung + Review",
+          "Gründer-Narrativ-Gestaltung",
+          "Expresslieferung (4 Tage)",
+          "Alle Rohdaten + Code"
+        ]
+      }
+    }
+  },
+  "process": {
+    "label": "Ablauf",
+    "heading": "Vier Tage. Fertig.",
+    "description": "Kein langes Onboarding. Kein endloses Hin und Her. Geplant, umgesetzt, geliefert.",
+    "steps": [
+      {
+        "day": "Tag 1",
+        "name": "Briefing",
+        "description": "Kickoff-Gespräch zur Abstimmung von Markenstimme, Zielgruppe und Kernbotschaften. Ich mache Notizen, damit Sie es nicht müssen.",
+        "detail": "Kickoff-Gespräch · Markenstimme · Asset-Sammlung"
+      },
+      {
+        "day": "Tag 2",
+        "name": "Script + Demo",
+        "description": "Scripts werden geschrieben und überprüft. Demo-Landing-Page wird in Bolt mit echtem Produktkontext gebaut und deployed.",
+        "detail": "Script-Entwürfe · Demo-Seite gebaut · Review-Sync"
+      },
+      {
+        "day": "Tag 3",
+        "name": "Dreh",
+        "description": "Videos werden in 2–3 Stilen gedreht: Screenrecording, Talking Head oder Produktdetail. Alles in einer Session.",
+        "detail": "Multi-Stil-Dreh · Natürliches Licht · Authentischer Ton"
+      },
+      {
+        "day": "Tag 4",
+        "name": "Lieferung",
+        "description": "Finaler Schnitt + Rohmaterial als ZIP. Demo-Seite live. Alles beschriftet und bereit für Ihr Team.",
+        "detail": "Finale Dateien · Rohmaterial · Demo-URL"
+      }
+    ]
+  },
+  "about": {
+    "label": "Über mich",
+    "heading": "Ingenieur, der gelernt hat, zu verkaufen, was er baut.",
+    "para1": "Ich bin Ihor. Linux-Ingenieur, jetzt UGC Creator, wohnhaft in München. Ich habe jahrelang Software gebaut, bevor ich meinen Vorteil erkannt habe: Ich kann verkaufen, was ich baue, weil ich es verstehe.",
+    "para2": "Die meisten UGC Creator können über Ihr Produkt sprechen. Ich kann es auch bauen. Wenn Sie mich beauftragen, erhalten Sie authentisches Video UND eine funktionierende Demo zum A/B-Testen gegen Ihre Live-Seite. Kein Mittelsmann, kein Agentur-Aufschlag.",
+    "skills": [
+      "Linux / DevOps Hintergrund",
+      "Authentische UGC Videoproduktion",
+      "Landing-Page- & Demo-Entwicklung"
+    ],
+    "terminal": {
+      "location_value": "München, Deutschland",
+      "status_value": "VERFÜGBAR"
+    }
+  },
+  "contact": {
+    "label": "Kontakt",
+    "heading": "Lassen Sie uns etwas bauen",
+    "email_label": "Direkte E-Mail",
+    "email_response": "Antwort innerhalb von 24 Stunden.",
+    "email_cta": "E-Mail senden",
+    "email_card_heading": "Lieber per E-Mail?",
+    "email_card_description": "Schreiben Sie mir direkt. Ich antworte innerhalb von 24 Stunden.",
+    "success_heading": "Nachricht erhalten.",
+    "success_body": "Ich melde mich innerhalb von 24 Stunden. Bis bald.",
+    "form": {
+      "name_label": "Name",
+      "name_placeholder": "Ihr Name",
+      "email_label": "E-Mail",
+      "email_placeholder": "sie@unternehmen.com",
+      "type_label": "Projekttyp",
+      "type_placeholder": "Paket auswählen",
+      "message_label": "Erzählen Sie mir von Ihrem Produkt",
+      "message_placeholder": "Was tut es? Für wen ist es? Was soll das Video erreichen?",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet…",
+      "types": [
+        "UGC Video (€250)",
+        "UGC + Demo Combo (€750)",
+        "Founder Story Package (€1.200)",
+        "Individuell / Noch unsicher"
+      ]
+    }
+  },
+  "footer": {
+    "copyright": "Ihor Uspekhov. München, Deutschland."
+  }
+}
